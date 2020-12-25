@@ -1,14 +1,12 @@
 # Metaheuristic_Optimization_Algorithms
 
-**Hyperparameter Optimization for classifiers using Genetic Algorithm**
-
-# Abstract
+## **Hyperparameter Optimization for classifiers using Genetic Algorithm**
 
 The performance of most classifiers is highly dependent on the hyperparameters used for training them. Different approaches like grid search or random search are frequently employed to find suitable parameter values for a given dataset. Grid search has the advantage of finding the best solutions at the cost of a much longer run time. Genetic algorithms, on the other hand, can find good solutions in less time, but the accuracy of these solutions is usually lower than those of grid search.
 
 In this study promising start points were provided to a Genetic Algorithm, in order to have more robustness in the results. Experiments were performed for SVM and Random Forest classifiers on 5 datasets. The proposed method achieves almost the same accuracy as grid search at a significantly less amount of time. This approach can be particularly useful when working on large datasets where grid search is not feasible.
 
-## 1. Introduction
+### 1. Introduction
 
 Hyperparameter tuning is a very crucial part of designing classifiers. A hyperparameter is a parameter whose value is used to control the learning process, which means if not chosen with careful consideration, it can significantly affect the performance of the model.
 
@@ -18,10 +16,9 @@ In this study, we will use a modified version of Genetic Algorithm to find an op
 
 We will start by materials and methods, going over the datasets used and the concepts of the proposed algorithm. Next, the results are illustrated, followed by the discussion section, which includes interpretations of the results and conclusions.
 
-## 2. Materials and Methods
+### 2. Materials and Methods
 
-  1.
-## Dataset Analysis
+#### Dataset Analysis
 
 In this project we will work with five classification datasets:
 
@@ -33,8 +30,7 @@ In this project we will work with five classification datasets:
 
 The first two datasets are used for tuning the algorithm, which includes design procedures and tuning Genetic Algorithm&#39;s parameters. The other 3 datasets are left aside for the final evaluation and comparison. Let us review each of them briefly.
 
-    1.
-### Spambase Dataset
+##### Spambase Dataset
 
 Table 1 demonstrates the outline of this dataset:
 
@@ -61,8 +57,8 @@ Therefore, the dataset would be as described in Figure 1 (next page).
 
 _Figure 1: Spambase dataset_
 
-    1.
-### Banana Dataset
+
+##### Banana Dataset
 
 Table 2 demonstrates the outline of this dataset:
 
@@ -77,8 +73,8 @@ _Table 2_
 
 This is an artificial data set where instances belong to several clusters with a banana shape. There are two attributes At1 and At2 corresponding to the x and y axis, respectively. The class label (-1 and 1) represents one of the two banana shapes in the dataset[CITATION Banana \l 1033].
 
-    1.
-### Wine Dataset
+
+##### Wine Dataset
 
 Table 3 demonstrates the outline of this dataset:
 
@@ -97,8 +93,8 @@ This dataset contains the results of a chemical analysis of wines grown in the s
 
 _Figure 2: Wine Dataset_
 
-    1.
-### Ionosphere Data set
+
+##### Ionosphere Data set
 
 Table 4 demonstrates the outline of this dataset:
 
@@ -115,8 +111,8 @@ This radar data was collected by a system in Goose Bay, Labrador. This system co
 
 Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were 17 pulse numbers for the Goose Bay system. Instances in this database are described by 2 attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal.[CITATION Ionosphere \l 1033]
 
-    1.
-### Iris Dataset
+
+##### Iris Dataset
 
 Table 5 demonstrates the outline of this dataset:
 
@@ -131,13 +127,13 @@ _Table 5_
 
 This dataset contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other. The predicted value is the class of iris plant[CITATION Iris \l 1033].
 
-  1.
-## Preprocessing
+
+#### Preprocessing
 
 To prepare the data for the algorithms, we need to make some changes. In order to be as efficient as possible, we need to scale the input features so that all input values are between 0 and 1. This can have a tremendous effect on the accuracy and will, also, speed up the process. We could also normalize the data to have zero mean and variance 1, but scaling here proved to be more effective.
 
-  1.
-## Design Procedures
+
+### 3. Design Procedures
 
 we are developing a genetic based algorithm that is a lot more efficient than Grid search, and yet can have a similar robustness in the results. The code was written in python, using the following frameworks and libraries:
 
@@ -147,8 +143,8 @@ we are developing a genetic based algorithm that is a lot more efficient than Gr
 
 First, we will have a review of the Genetic Algorithm.
 
-    1.
-### Genetic Algorithm
+
+#### Genetic Algorithm
 
 Genetic Algorithms (GAs) are a subclass of Evolutionary Algorithms where (a) the genotypes g of the search space G are strings of primitive elements (usually all of the same type) such as bits, integer, or real numbers, and (b) search operations such as mutation and crossover directly modify these genotypes[CITATION WEI11 \l 1033].
 
@@ -168,8 +164,8 @@ crossover is performed by swapping parts of two genotypes. When performing singl
 
 _Figure 4: single-point (left) and two-point (right) crossover_
 
-    1.
-### Proposed Algorithm
+
+#### Proposed Algorithm
 
 The proposed algorithm is a modified version of the Genetic Algorithm. One of the essential parts of this algorithm is replacing the random initial population of the genetic algorithm with promising start points in order to achieve this robustness. Using such start points, we will have two advantages:
 
@@ -202,8 +198,8 @@ Next, we will go over how the Genetic Algorithm is applied. In each iteration, G
 
 - _ **Stopping Criteria** _: After performing the above computations for one iteration, the algorithm sorts the new population and looks for the new best case. If the performance was not increased after a certain number of iterations, it will stop and print the current best result. In order to prevent long runs, we set a limit for the maximum number of iterations, as well.
 
-1.
-# Results
+
+### 4. Results
 
 In this section all results are presented. On each dataset, we will compare the performance of the proposed algorithm against Grid search, in both terms of classifier accuracy and run time. Tables 6-10 illustrate these results.
 
@@ -249,8 +245,8 @@ _Table 10_
 | Proposed Alg. | 0.974 | 0.08 s | 0.978 | 3 s |
 | Grid search | 0.978 | 212 s | 0.978 | 582 s |
 
-1.
-# Discussion
+
+### 5. Discussion
 
 As we can see in the results, accuracies achieved using the proposed algorithm are almost as good as Grid search, and in some cases even they are exactly equal. The greatest difference observed was 0.017 (1.7 %) which could be negligible. The major difference, however, between the two methods, is the time needed for each to reach the result. Our proposed algorithm is significantly faster in all sections. In the extreme cases, Grid search took more than 3000 times the time needed for the proposed algorithm. Even in the closest cases, Grid search&#39;s run time was more than 160 times run time of the proposed algorithm.
 
@@ -258,8 +254,8 @@ What is more, large step sizes and limits were sometimes need for Grid search in
 
 In conclusion, if we are working with large datasets and with limited resources, the best solution is to use this proposed algorithm, given we can settle for a good enough answer that might not exactly be the best. if, however, the absolute best answer is mandatory, we can use the proposed algorithm to get an approximate answer, then use Grid search and search just a small neighborhood to find the best answer. We can repeat this process multiple times in order to make sure it is not just a local optimum.
 
-1.
-# References
+
+### References
 
 | [1] | M. Claesen and B. De Moor, &quot;Hyperparameter Search in Machine Learning,&quot; in _The XI Metaheuristics International Conference_, 2015. |
 | --- | --- |
