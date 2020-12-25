@@ -12,7 +12,7 @@ Hyperparameter tuning is a very crucial part of designing classifiers. A hyperpa
 
 The same kind of machine learning model can have different constraints, constants, and learning rates. These measures are called hyperparameters and must be tuned so that the model can optimally solve the machine learning problem. Hyperparameter optimization finds a set of hyperparameters that yields an optimal model which minimizes a predefined loss function on given data[CITATION Cla15 \l 1033]. There are different approaches to perform hyperparameter tuning, and, in this project, we seek to design a novel approach, and compare it against the commonly used Grid Search.
 
-In this study, we will use a modified version of Genetic Algorithm to find an optimal set of hyperparameters for SVM and Random Forest classifiers and compare with Grid search, in both terms of classifier&#39;s accuracy and the time needed to find those hyperparameters. We will use different benchmark classification datasets to tune our algorithm, as well as perform the final evaluation.
+In this study, we will use a modified version of Genetic Algorithm to find an optimal set of hyperparameters for SVM and Random Forest classifiers and compare with Grid search, in both terms of classifier's accuracy and the time needed to find those hyperparameters. We will use different benchmark classification datasets to tune our algorithm, as well as perform the final evaluation.
 
 We will start by materials and methods, going over the datasets used and the concepts of the proposed algorithm. Next, the results are illustrated, followed by the discussion section, which includes interpretations of the results and conclusions.
 
@@ -28,7 +28,7 @@ In this project we will work with five classification datasets:
 - Ionosphere Dataset
 - Iris Dataset
 
-The first two datasets are used for tuning the algorithm, which includes design procedures and tuning Genetic Algorithm&#39;s parameters. The other 3 datasets are left aside for the final evaluation and comparison. Let us review each of them briefly.
+The first two datasets are used for tuning the algorithm, which includes design procedures and tuning Genetic Algorithm's parameters. The other 3 datasets are left aside for the final evaluation and comparison. Let us review each of them briefly.
 
 ##### Spambase Dataset
 
@@ -45,8 +45,8 @@ _Table 1_
 
 This database contains information about 4597 email messages. Most of the features indicate whether a particular word or character was frequently occurring in the email. Here are the definitions of the features:
 
-- 48 continuous real attributes of type word\_freq\_&quot;WORD&quot; = percentage of words in the e-mail that match &quot;WORD&quot;. A &quot;word&quot; in this case is any string of alphanumeric characters bounded by non-alphanumeric characters or end-of-string.
-- 6 continuous real attributes of type char\_freq\_&quot;CHAR&quot; = percentage of characters in the e-mail that match &quot;CHAR&quot;.
+- 48 continuous real attributes of type word\_freq\_"WORD" = percentage of words in the e-mail that match "WORD". A "WORD" in this case is any string of alphanumeric characters bounded by non-alphanumeric characters or end-of-string.
+- 6 continuous real attributes of type char\_freq\_"CHAR" = percentage of characters in the e-mail that match "CHAR".
 - 1 continuous real attribute of type Capital\_run\_length\_average = average length of uninterrupted sequences of capital letters.
 - 1 continuous integer attribute of type Capital\_run\_length\_longest = length of longest uninterrupted sequence of capital letters.
 - 1 continuous integer attribute of type Capital\_run\_length\_total = total number of capital letters in the e-mail[CITATION Spambase \l 1033].
@@ -107,7 +107,7 @@ _Table 4_
 | Number of features | 34 |
 | Feature value types | Integer, Real |
 
-This radar data was collected by a system in Goose Bay, Labrador. This system consists of a phased array of 16 high-frequency antennas with a total transmitted power on the order of 6.4 kilowatts. The targets were free electrons in the ionosphere. &quot;Good&quot; radar returns are those showing evidence of some type of structure in the ionosphere. &quot;Bad&quot; returns are those that do not; their signals pass through the ionosphere.
+This radar data was collected by a system in Goose Bay, Labrador. This system consists of a phased array of 16 high-frequency antennas with a total transmitted power on the order of 6.4 kilowatts. The targets were free electrons in the ionosphere. "Good"; radar returns are those showing evidence of some type of structure in the ionosphere. "Bad" returns are those that do not; their signals pass through the ionosphere.
 
 Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were 17 pulse numbers for the Goose Bay system. Instances in this database are described by 2 attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal.[CITATION Ionosphere \l 1033]
 
@@ -172,7 +172,7 @@ The proposed algorithm is a modified version of the Genetic Algorithm. One of th
 - The risk of ending up far away from the optimal value is decreased significantly.
 - The time needed for finding the best solution is reduced.
 
-The first two datasets were used for tuning this section, which is how to choose those promising start points. To conclude, a particular probability distribution with specific parameters is used for each hyperparameter&#39;s initialization. The results for each hyper parameter are as follows:
+The first two datasets were used for tuning this section, which is how to choose those promising start points. To conclude, a particular probability distribution with specific parameters is used for each hyperparameter's initialization. The results for each hyper parameter are as follows:
 
 _ **SVM** _:
 
@@ -183,12 +183,12 @@ _ **SVM** _:
 _ **Random Forest** _:
 
 - _ **Number of Estimators** _: for this parameter we are simply using a uniform distribution.
-- _ **Max Depth** _: This must be an integer, so, a poisson distribution with was the final choice. &#39;a&#39; and &#39;b&#39; are tuned using the first 2 datasets.
+- _ **Max Depth** _: This must be an integer, so, a poisson distribution with was the final choice. 'a' and 'b' are tuned using the first 2 datasets.
 - _ **Max Features:** _ Here, as well, a poisson distribution with was used.
 
 Next, we will go over how the Genetic Algorithm is applied. In each iteration, GA is comprised of the following sections:
 
-- _ **Fitness** _: The objective function here is the classifier&#39;s accuracy, specifically, on the test dataset. To compute fitness, we have to train a classifier using the parameters of interest and calculate its accuracy on the test set.
+- _ **Fitness** _: The objective function here is the classifier's accuracy, specifically, on the test dataset. To compute fitness, we have to train a classifier using the parameters of interest and calculate its accuracy on the test set.
 
 - _ **Selection** _: In order to use the fitness values as probabilities for selection, they are scaled to have values between 0 and 1. According to those probabilities, we will choose a population with the pre-defined size. Needless to say, a high accuracy will have a greater probability of being chosen.
 
@@ -248,7 +248,7 @@ _Table 10_
 
 ### 5. Discussion
 
-As we can see in the results, accuracies achieved using the proposed algorithm are almost as good as Grid search, and in some cases even they are exactly equal. The greatest difference observed was 0.017 (1.7 %) which could be negligible. The major difference, however, between the two methods, is the time needed for each to reach the result. Our proposed algorithm is significantly faster in all sections. In the extreme cases, Grid search took more than 3000 times the time needed for the proposed algorithm. Even in the closest cases, Grid search&#39;s run time was more than 160 times run time of the proposed algorithm.
+As we can see in the results, accuracies achieved using the proposed algorithm are almost as good as Grid search, and in some cases even they are exactly equal. The greatest difference observed was 0.017 (1.7 %) which could be negligible. The major difference, however, between the two methods, is the time needed for each to reach the result. Our proposed algorithm is significantly faster in all sections. In the extreme cases, Grid search took more than 3000 times the time needed for the proposed algorithm. Even in the closest cases, Grid search's run time was more than 160 times run time of the proposed algorithm.
 
 What is more, large step sizes and limits were sometimes need for Grid search in order to have a reasonable run time. In critical cases, where we need small steps, Grid search needs even more time. Nonetheless, this is the expense we have to pay, if we are looking for the absolute best result.
 
@@ -257,12 +257,12 @@ In conclusion, if we are working with large datasets and with limited resources,
 
 ### References
 
-| [1] | M. Claesen and B. De Moor, &quot;Hyperparameter Search in Machine Learning,&quot; in _The XI Metaheuristics International Conference_, 2015. |
+| [1] | M. Claesen and B. De Moor, "Hyperparameter Search in Machine Learning," in _The XI Metaheuristics International Conference_, 2015. |
 | --- | --- |
-| [2] | &quot;Spambase Data Set,&quot; UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/spambase. |
-| [3] | &quot;Banan Data Set,&quot; [Online]. Available: https://sci2s.ugr.es/keel/dataset.php?cod=182. |
-| [4] | &quot;Wine Data Set,&quot; UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/wine. |
-| [5] | &quot;Ionosphere Data Set,&quot; UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/ionosphere. |
-| [6] | &quot;Iris Data Set,&quot; UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/iris. |
+| [2] | "Spambase Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/spambase. |
+| [3] | "Banan Data Set," [Online]. Available: https://sci2s.ugr.es/keel/dataset.php?cod=182. |
+| [4] | "Wine Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/wine. |
+| [5] | "Ionosphere Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/ionosphere. |
+| [6] | "Iris Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/iris. |
 | [7] | T. WEIS, Global Optimization Algorithms: Theory and Application, 3rd edition, 2011. |
-| [8] | D. Whitley, &quot;A genetic algorithm tutorial,&quot; _Statistics and Computing,_ vol. 4, no. 2, pp. 65-85, 1994. |
+| [8] | D. Whitley, "A genetic algorithm tutorial," _Statistics and Computing,_ vol. 4, no. 2, pp. 65-85, 1994. |
