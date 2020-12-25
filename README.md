@@ -1,4 +1,4 @@
-# Metaheuristic_Optimization_Algorithms
+# Metaheuristic_Optimization
 
 ## **Hyperparameter Optimization for classifiers using Genetic Algorithm**
 
