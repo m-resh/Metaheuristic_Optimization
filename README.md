@@ -210,13 +210,13 @@ The first two datasets were used for tuning this section, which is how to choose
 
 - **Kernel**: We only have 4 options here: rbf, sigmoid, linear, and polynomial, but instead of a complete random initialization, we can assign a probability to each choice. Since rbf was mostly the best kernel, the highest probability was assigned to it. The final probabilities assigned to the 4 kernels are 0.6, 0.3, 0.07, and 0.03, respectively.
 
-- **Gamma**: Since the best values for gamma seemed to be inversely proportion to the number of features and the variance of the inputs, a gamma distribution with and was chosen here.
+- **Gamma**: Since the best values for gamma seemed to be inversely proportion to the number of features and the variance of the inputs, a gamma distribution with k (shape) = 2/(n_features*variance) and θ (scale) = 0.5 was chosen here.
 
 **Random Forest**:
 
 - **Number of Estimators**: for this parameter we are simply using a uniform distribution.
-- **Max Depth**: This must be an integer, so, a poisson distribution with was the final choice. 'a' and 'b' are tuned using the first 2 datasets.
-- **Max Features**: Here, as well, a poisson distribution with was used.
+- **Max Depth**: This must be an integer, so, a poisson distribution with λ = int(a + n_features/b) was the final choice. 'a' and 'b' are tuned using the first 2 datasets.
+- **Max Features**: Here, as well, a poisson distribution with λ = int(sqrt(n_features)) was used.
 
 Next, we will go over how the Genetic Algorithm is applied. In each iteration, GA is comprised of the following sections:
 
