@@ -42,7 +42,7 @@ In this study promising start points were provided to a Genetic Algorithm, in or
 
 Hyperparameter tuning is a very crucial part of designing classifiers. A hyperparameter is a parameter whose value is used to control the learning process, which means if not chosen with careful consideration, it can significantly affect the performance of the model.
 
-The same kind of machine learning model can have different constraints, constants, and learning rates. These measures are called hyperparameters and must be tuned so that the model can optimally solve the machine learning problem. Hyperparameter optimization finds a set of hyperparameters that yields an optimal model which minimizes a predefined loss function on given data[CITATION Cla15 \l 1033]. There are different approaches to perform hyperparameter tuning, and, in this project, we seek to design a novel approach, and compare it against the commonly used Grid Search.
+The same kind of machine learning model can have different constraints, constants, and learning rates. These measures are called hyperparameters and must be tuned so that the model can optimally solve the machine learning problem. Hyperparameter optimization finds a set of hyperparameters that yields an optimal model which minimizes a predefined loss function on given data [1]. There are different approaches to perform hyperparameter tuning, and, in this project, we seek to design a novel approach, and compare it against the commonly used Grid Search.
 
 In this study, we will use a modified version of Genetic Algorithm to find an optimal set of hyperparameters for SVM and Random Forest classifiers and compare with Grid search, in both terms of classifier's accuracy and the time needed to find those hyperparameters. We will use different benchmark classification datasets to tune our algorithm, as well as perform the final evaluation.
 
@@ -78,7 +78,7 @@ This database contains information about 4597 email messages. Most of the featur
 - 6 continuous real attributes of type char\_freq\_"CHAR" = percentage of characters in the e-mail that match "CHAR".
 - 1 continuous real attribute of type Capital\_run\_length\_average = average length of uninterrupted sequences of capital letters.
 - 1 continuous integer attribute of type Capital\_run\_length\_longest = length of longest uninterrupted sequence of capital letters.
-- 1 continuous integer attribute of type Capital\_run\_length\_total = total number of capital letters in the e-mail [1].
+- 1 continuous integer attribute of type Capital\_run\_length\_total = total number of capital letters in the e-mail [2].
 
 
 ##### Banana Dataset
@@ -92,7 +92,7 @@ _Table 2_
 | 2 | 5,300 | 2,376 (+1), 2,924 (-1) | 2 | Real |
 
 
-This is an artificial data set where instances belong to several clusters with a banana shape. There are two attributes At1 and At2 corresponding to the x and y axis, respectively. The class label (-1 and 1) represents one of the two banana shapes in the dataset [2].
+This is an artificial data set where instances belong to several clusters with a banana shape. There are two attributes At1 and At2 corresponding to the x and y axis, respectively. The class label (-1 and 1) represents one of the two banana shapes in the dataset [3].
 
 
 ##### Wine Dataset
@@ -107,7 +107,7 @@ _Table 3_
 | 3 | 178 | 59 (1), 71 (2), 48 (3) | 13 | Real |
 
 
-This dataset contains the results of a chemical analysis of wines grown in the same region in Italy but derived from three different cultivars. The analysis determined the quantities of 13 constituents found in each of the three types of wines [3].
+This dataset contains the results of a chemical analysis of wines grown in the same region in Italy but derived from three different cultivars. The analysis determined the quantities of 13 constituents found in each of the three types of wines [4].
 
 
 ##### Ionosphere Data set
@@ -123,7 +123,7 @@ _Table 4_
 
 This radar data was collected by a system in Goose Bay, Labrador. This system consists of a phased array of 16 high-frequency antennas with a total transmitted power on the order of 6.4 kilowatts. The targets were free electrons in the ionosphere. "Good" radar returns are those showing evidence of some type of structure in the ionosphere. "Bad" returns are those that do not; their signals pass through the ionosphere.
 
-Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were 17 pulse numbers for the Goose Bay system. Instances in this database are described by 2 attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal [4].
+Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were 17 pulse numbers for the Goose Bay system. Instances in this database are described by 2 attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal [5].
 
 
 ##### Iris Dataset
@@ -137,7 +137,7 @@ _Table 5_
 | 3 | 150 | 50 (setosa), 50 (versicolor), 50 (virginica) | 4 | Real |
 
 
-This dataset contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other. The predicted value is the class of iris plant [5].
+This dataset contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other. The predicted value is the class of iris plant [6].
 
 
 #### Preprocessing
@@ -158,23 +158,23 @@ First, we will have a review of the Genetic Algorithm.
 
 #### Genetic Algorithm
 
-Genetic Algorithms (GAs) are a subclass of Evolutionary Algorithms where (a) the genotypes g of the search space G are strings of primitive elements (usually all of the same type) such as bits, integer, or real numbers, and (b) search operations such as mutation and crossover directly modify these genotypes[CITATION WEI11 \l 1033].
+Genetic Algorithms (GAs) are a subclass of Evolutionary Algorithms where (a) the genotypes g of the search space G are strings of primitive elements (usually all of the same type) such as bits, integer, or real numbers, and (b) search operations such as mutation and crossover directly modify these genotypes [7].
 
 In a GA, a population of candidate solutions (i.e. individuals, creatures, or phenotypes) to an optimization problem is evolved toward better solutions. Each candidate solution has a set of properties (its chromosomes or genotype) which can be mutated and altered.
 
-The algorithm usually starts with a randomly generated population, and in each iteration, the fitness of every individual in the population is evaluated. The fitness is usually the value of the objective function in the optimization problem being solved. The more fit individuals are more probable to be selected from the current population. After each individual is modified (through genetic operators), the new generation of candidate solutions is then used in the next iteration of the algorithm. The algorithm terminates when either a maximum number of generations has been produced, or a satisfactory fitness level has been reached for the population [6].
+The algorithm usually starts with a randomly generated population, and in each iteration, the fitness of every individual in the population is evaluated. The fitness is usually the value of the objective function in the optimization problem being solved. The more fit individuals are more probable to be selected from the current population. After each individual is modified (through genetic operators), the new generation of candidate solutions is then used in the next iteration of the algorithm. The algorithm terminates when either a maximum number of generations has been produced, or a satisfactory fitness level has been reached for the population [8].
 
-There are two types of genetic operators: mutation and cross over. Usually with a combination of both, a Genetic Algorithm will generate the new population in each iteration. Mutation is an important method for preserving the diversity of the candidate solutions by introducing small, random changes into them. This can be achieved by randomly modifying the value of a gene, as illustrated in figure 3 [7].
+There are two types of genetic operators: mutation and cross over. Usually with a combination of both, a Genetic Algorithm will generate the new population in each iteration. Mutation is an important method for preserving the diversity of the candidate solutions by introducing small, random changes into them. This can be achieved by randomly modifying the value of a gene, as illustrated in figure 6 [7].
 
-![](RackMultipart20201225-4-rr0cgk_html_fa6237214541b198.jpg)
+![](figures/4/mutation.png)
 
-_Figure 3: multi-gene mutation_
+_Figure 6: multi-gene mutation_
 
-crossover is performed by swapping parts of two genotypes. When performing single-point crossover (SPX, 1-PX), both parental chromosomes are split at a randomly determined crossover point. Subsequently, a new child genotype is created by appending the second part of the second parent to the first part of the first parent as illustrated in Figure 4. With crossover, it is possible that two offspring are created at once from the two parents. The second offspring is shown in the long parentheses. In two-point crossover (TPX, 2-PX), both parental genotypes are split at two points and a new offspring is created by using parts number one and three from the first, and the middle part from the second parent chromosome. The second possible offspring of this operation is again displayed in parentheses[CITATION WEI11 \l 1033].
+crossover is performed by swapping parts of two genotypes. When performing single-point crossover (SPX, 1-PX), both parental chromosomes are split at a randomly determined crossover point. Subsequently, a new child genotype is created by appending the second part of the second parent to the first part of the first parent as illustrated in Figure 7. With crossover, it is possible that two offspring are created at once from the two parents. The second offspring is shown in the long parentheses. In two-point crossover (TPX, 2-PX), both parental genotypes are split at two points and a new offspring is created by using parts number one and three from the first, and the middle part from the second parent chromosome. The second possible offspring of this operation is again displayed in parentheses [7].
 
-![](RackMultipart20201225-4-rr0cgk_html_82657384ddcdd251.jpg)
+![](figures/4/crossover.png)
 
-_Figure 4: single-point (left) and two-point (right) crossover_
+_Figure 7: single-point (left) and two-point (right) crossover_
 
 
 #### Proposed Algorithm
