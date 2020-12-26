@@ -163,9 +163,9 @@ There are two types of genetic operators: mutation and cross over. Usually with 
 
 crossover is performed by swapping parts of two genotypes. When performing single-point crossover (SPX, 1-PX), both parental chromosomes are split at a randomly determined crossover point. Subsequently, a new child genotype is created by appending the second part of the second parent to the first part of the first parent as illustrated in Figure 7. With crossover, it is possible that two offspring are created at once from the two parents. The second offspring is shown in the long parentheses. In two-point crossover (TPX, 2-PX), both parental genotypes are split at two points and a new offspring is created by using parts number one and three from the first, and the middle part from the second parent chromosome. The second possible offspring of this operation is again displayed in parentheses [7].
 
-![](figures/4/crossover.png)
-
-_Figure 7: single-point (left) and two-point (right) crossover_
+| ![](figures/4/crossover.png) |
+|:--:|
+| _Figure 7: single-point (left) and two-point (right) crossover_ |
 
 
 #### Proposed Algorithm
@@ -211,7 +211,7 @@ Please note that in Grid search we are using reasonable limits, in order to have
 _Table 6_
 
 | Spambase Dataset | SVM | Random Forest |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | - | Accuracy | Run time | Accuracy | Run time |
 | Proposed Alg. | 0.934 | 16 s | 0.955 | 10 s |
 | Grid search | 0.941 | 4250 s | 0.957 | 1703 s |
@@ -219,7 +219,7 @@ _Table 6_
 _Table 7_
 
 | Banana Dataset | SVM | Random Forest |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | - | Accuracy | Run time | Accuracy | Run time |
 | Proposed Alg. | 0.914 | 10 s | 0.901 | 8 s |
 | Grid search | 0.915 | 4558 s | 0.911 | 1307 |
@@ -227,7 +227,7 @@ _Table 7_
 _Table 8_
 
 | Wine Dataset | SVM | Random Forest |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | - | Accuracy | Run time | Accuracy | Run time |
 | Proposed Alg. | 1.0 | 0.11 s | 1.0 | 3 s |
 | Grid search | 1.0 | 280 s | 1.0 | 790 s |
@@ -235,7 +235,7 @@ _Table 8_
 _Table 9_
 
 | Ionosphere Dataset | SVM | Random Forest |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | - | Accuracy | Run time | Accuracy | Run time |
 | Proposed Alg. | 0.962 | 0.18 s | 0.953 | 4 s |
 | Grid search | 0.971 | 560 s | 0.970 | 973 s |
@@ -243,7 +243,7 @@ _Table 9_
 _Table 10_
 
 | Iris Dataset | SVM | Random Forest |
-| --- | --- | --- |
+| :---: | :---: | :---: |
 | - | Accuracy | Run time | Accuracy | Run time |
 | Proposed Alg. | 0.974 | 0.08 s | 0.978 | 3 s |
 | Grid search | 0.978 | 212 s | 0.978 | 582 s |
