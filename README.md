@@ -32,6 +32,8 @@ In part 3, our optimization problems are blackbox problems! With no knowledge of
 
 ## **Hyperparameter Optimization for classifiers using Genetic Algorithm**
 
+### Abstract
+
 The performance of most classifiers is highly dependent on the hyperparameters used for training them. Different approaches like grid search or random search are frequently employed to find suitable parameter values for a given dataset. Grid search has the advantage of finding the best solutions at the cost of a much longer run time. Genetic algorithm, on the other hand, can find optimal solutions in a short amount of time, but the accuracy of these solutions is usually a bit lower than those of grid search.
 
 In this study promising start points were provided to a Genetic Algorithm, in order to have more robustness in the results. Experiments were performed for SVM and Random Forest classifiers on 5 datasets. The proposed method achieves almost the same accuracy as grid search at a significantly less amount of time. This approach can be particularly useful when working on large datasets where grid search is not feasible.
