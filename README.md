@@ -210,40 +210,40 @@ Please note that in Grid search we are using reasonable limits, in order to have
 
 _Table 6_
 
-| Spambase Dataset | SVM | Random Forest |
-| :---: | :---: | :---: |
+| Spambase Dataset | SVM | | Random Forest | |
+| :---: | :---: | :---: | :---: | :---: |
 | - | Accuracy | Run time | Accuracy | Run time |
 | Proposed Alg. | 0.934 | 16 s | 0.955 | 10 s |
 | Grid search | 0.941 | 4250 s | 0.957 | 1703 s |
 
 _Table 7_
 
-| Banana Dataset | SVM | Random Forest |
-| :---: | :---: | :---: |
+| Banana Dataset | SVM | | Random Forest | |
+| :---: | :---: | :---: | :---: | :---: |
 | - | Accuracy | Run time | Accuracy | Run time |
 | Proposed Alg. | 0.914 | 10 s | 0.901 | 8 s |
 | Grid search | 0.915 | 4558 s | 0.911 | 1307 |
 
 _Table 8_
 
-| Wine Dataset | SVM | Random Forest |
-| :---: | :---: | :---: |
+| Wine Dataset | SVM | | Random Forest | |
+| :---: | :---: | :---: | :---: | :---: |
 | - | Accuracy | Run time | Accuracy | Run time |
 | Proposed Alg. | 1.0 | 0.11 s | 1.0 | 3 s |
 | Grid search | 1.0 | 280 s | 1.0 | 790 s |
 
 _Table 9_
 
-| Ionosphere Dataset | SVM | Random Forest |
-| :---: | :---: | :---: |
+| Ionosphere Dataset | SVM | | Random Forest | |
+| :---: | :---: | :---: | :---: | :---: |
 | - | Accuracy | Run time | Accuracy | Run time |
 | Proposed Alg. | 0.962 | 0.18 s | 0.953 | 4 s |
 | Grid search | 0.971 | 560 s | 0.970 | 973 s |
 
 _Table 10_
 
-| Iris Dataset | SVM | Random Forest |
-| :---: | :---: | :---: |
+| Iris Dataset | SVM | | Random Forest | |
+| :---: | :---: | :---: | :---: | :---: |
 | - | Accuracy | Run time | Accuracy | Run time |
 | Proposed Alg. | 0.974 | 0.08 s | 0.978 | 3 s |
 | Grid search | 0.978 | 212 s | 0.978 | 582 s |
