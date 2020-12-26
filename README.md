@@ -25,7 +25,7 @@ In the next part, Genetic Algorithm, Differential Evolution, Brute-force, and ra
 
 _Figure 5: The traveling salesmen proble_
 
-In part 3, 
+In part 3, our optimization problems are blackbox problems! With no knowledge of how these functions work, Particle Swarm Optimization is implemented and compared alongside genetic algorithm, grid search, and random search. Lastly, a real-world application of metaheuristic optimization is presented as the final project: **Hyperparameter Optimization for classifiers using Genetic Algorithm**
 
 
 
