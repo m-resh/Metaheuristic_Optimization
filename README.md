@@ -2,11 +2,11 @@
 This repo consists of 4 parts. In the first part, classical optimazion methods, e.g. random search, gradient descend, and newton-raphson, are implemented and compared on 4 general mathematical functions. Figures 1-4 illustrate the jurney of the gradient descend algorithm on the surfaces of the 4 proposed functions.
 
 <img src="figures/1/gd0.png" alt="drawing" width="400"/> | <img src="figures/1/gd1.png" alt="drawing" width="400"/>
-:-------------------------:|:-------------------------:
+:--:|:--:
 _Figure 1: Problem 0_ | _Figure 2: Problem 1_
 
 <img src="figures/1/gd2.png" alt="drawing" width="400"/> | <img src="figures/1/gd3.png" alt="drawing" width="400"/>
-:-------------------------:|:-------------------------:
+:--:|:--:
 _Figure 3: Problem 2_ | _Figure 4: Problem 3_
 
 
