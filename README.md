@@ -255,6 +255,7 @@ What is more, large step sizes and limits were sometimes need for Grid search in
 In conclusion, if we are working with large datasets and with limited resources, the best solution is to use this proposed algorithm, given we can settle for a good enough answer that might not exactly be the best. if, however, the absolute best answer is mandatory, we can use the proposed algorithm to get an approximate answer, then use Grid search and search just a small neighborhood to find the best answer. We can repeat this process multiple times in order to make sure it is not just a local optimum.
 
 
+---
 ### References
 
 [1] M. Claesen and B. De Moor, "Hyperparameter Search in Machine Learning," in _The XI Metaheuristics International Conference_, 2015.
