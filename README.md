@@ -107,7 +107,7 @@ _Table 4_
 | Number of features | 34 |
 | Feature value types | Integer, Real |
 
-This radar data was collected by a system in Goose Bay, Labrador. This system consists of a phased array of 16 high-frequency antennas with a total transmitted power on the order of 6.4 kilowatts. The targets were free electrons in the ionosphere. "Good"; radar returns are those showing evidence of some type of structure in the ionosphere. "Bad" returns are those that do not; their signals pass through the ionosphere.
+This radar data was collected by a system in Goose Bay, Labrador. This system consists of a phased array of 16 high-frequency antennas with a total transmitted power on the order of 6.4 kilowatts. The targets were free electrons in the ionosphere. "Good" radar returns are those showing evidence of some type of structure in the ionosphere. "Bad" returns are those that do not; their signals pass through the ionosphere.
 
 Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were 17 pulse numbers for the Goose Bay system. Instances in this database are described by 2 attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal.[CITATION Ionosphere \l 1033]
 
@@ -257,12 +257,18 @@ In conclusion, if we are working with large datasets and with limited resources,
 
 ### References
 
-| [1] | M. Claesen and B. De Moor, "Hyperparameter Search in Machine Learning," in _The XI Metaheuristics International Conference_, 2015. |
-| --- | --- |
-| [2] | "Spambase Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/spambase. |
-| [3] | "Banan Data Set," [Online]. Available: https://sci2s.ugr.es/keel/dataset.php?cod=182. |
-| [4] | "Wine Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/wine. |
-| [5] | "Ionosphere Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/ionosphere. |
-| [6] | "Iris Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/iris. |
-| [7] | T. WEIS, Global Optimization Algorithms: Theory and Application, 3rd edition, 2011. |
-| [8] | D. Whitley, "A genetic algorithm tutorial," _Statistics and Computing,_ vol. 4, no. 2, pp. 65-85, 1994. |
+[1] M. Claesen and B. De Moor, "Hyperparameter Search in Machine Learning," in _The XI Metaheuristics International Conference_, 2015.
+
+[2] "Spambase Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/spambase.
+
+[3] "Banan Data Set," [Online]. Available: https://sci2s.ugr.es/keel/dataset.php?cod=182.
+
+[4] "Wine Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/wine.
+
+[5] "Ionosphere Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/ionosphere.
+
+[6] "Iris Data Set," UCI Machine Learning Repository, [Online]. Available: https://archive.ics.uci.edu/ml/datasets/iris.
+
+[7] T. WEIS, Global Optimization Algorithms: Theory and Application, 3rd edition, 2011.
+
+[8] D. Whitley, "A genetic algorithm tutorial," _Statistics and Computing,_ vol. 4, no. 2, pp. 65-85, 1994.
