@@ -1,21 +1,21 @@
 # Metaheuristic_Optimization
 This repo consists of 4 parts. In the first part, classical optimazion methods, e.g. random search, gradient descend, and newton-raphson, are implemented and compared on 4 general mathematical functions. Figures 1-4 illustrate the jurney of the gradient descend algorithm on the surfaces of the 4 proposed functions.
 
-![](figures/1/gd0.png)
+![](figures/1/gd0.png =250x)
 
 _Figure 1: Problem 0_
 
-![](figures/1/gd1.png)
+![](figures/1/gd1.png =250x)
 
 _Figure 2: Problem 1_
 
 
-![](figures/1/gd2.png)
+![](figures/1/gd2.png =250x)
 
 _Figure 3: Problem 2_
 
 
-![](figures/1/gd3.png)
+![](figures/1/gd3.png =250x)
 
 _Figure 4: Problem 3_
 
