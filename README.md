@@ -14,6 +14,7 @@ _Figure 3: Problem 2_ | _Figure 4: Problem 3_
 In the next part, Genetic Algorithm, Differential Evolution, Brute-force, and random search are implemented and compared on the traveling salesmen problem, as an example of NP-hard problems. In this problem, we are looking for a tour through 6 cities with the least cost (i.e. least total distance travelled). Figure 5 is a visualizations of this problem which shows the optimal tour for the chosen random seed.
 
 ![](figures/2/optimal.png)
+
 *_Figure 5: The traveling salesman problem_*
 
 In part 3, our optimization problems are blackbox problems! With no knowledge of how these functions work, Particle Swarm Optimization is implemented and compared alongside genetic algorithm, grid search, and random search. Lastly, a real-world application of metaheuristic optimization is presented as the final project: **Hyperparameter Optimization for classifiers using Genetic Algorithm**
