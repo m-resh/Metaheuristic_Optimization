@@ -1,8 +1,37 @@
 # Metaheuristic_Optimization
+This repo consists of 4 parts. In the first part, classical optimazion methods, e.g. random search, gradient descend, and newton-raphson, are implemented and compared on 4 general mathematical functions. Figures 1-4 illustrate the jurney of the gradient descend algorithm on the surfaces of the 4 proposed functions.
+
+![](figures/1/gd0.png)
+
+_Figure 1: Problem 0_
+
+![](figures/1/gd1.png)
+
+_Figure 2: Problem 1_
+
+
+![](figures/1/gd2.png)
+
+_Figure 3: Problem 2_
+
+
+![](figures/1/gd3.png)
+
+_Figure 4: Problem 3_
+
+In the next part, Genetic Algorithm, Differential Evolution, Brute-force, and random search are implemented and compared on the traveling salesmen problem, as an example of NP-hard problems. In this problem, we are looking for a tour through 6 cities with the least cost (i.e. least total distance travelled). Figure 5 is a visualizations of this problem which shows the optimal tour for the chosen random seed.
+
+![](figures/2/optimal.png)
+
+_Figure 5: The traveling salesmen proble_
+
+In part 3, 
+
+
 
 ## **Hyperparameter Optimization for classifiers using Genetic Algorithm**
 
-The performance of most classifiers is highly dependent on the hyperparameters used for training them. Different approaches like grid search or random search are frequently employed to find suitable parameter values for a given dataset. Grid search has the advantage of finding the best solutions at the cost of a much longer run time. Genetic algorithms, on the other hand, can find good solutions in less time, but the accuracy of these solutions is usually lower than those of grid search.
+The performance of most classifiers is highly dependent on the hyperparameters used for training them. Different approaches like grid search or random search are frequently employed to find suitable parameter values for a given dataset. Grid search has the advantage of finding the best solutions at the cost of a much longer run time. Genetic algorithm, on the other hand, can find optimal solutions in a short amount of time, but the accuracy of these solutions is usually a bit lower than those of grid search.
 
 In this study promising start points were provided to a Genetic Algorithm, in order to have more robustness in the results. Experiments were performed for SVM and Random Forest classifiers on 5 datasets. The proposed method achieves almost the same accuracy as grid search at a significantly less amount of time. This approach can be particularly useful when working on large datasets where grid search is not feasible.
 
