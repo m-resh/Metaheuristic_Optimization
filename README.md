@@ -68,12 +68,9 @@ Table 1 demonstrates the outline of this dataset:
 
 _Table 1_
 
-| Number of classes | 2 |
-| --- | --- |
-| Total number of samples | 4,597 |
-| Number of samples per class | 1,812 (1), 2,785 (0) |
-| Number of features | 57 |
-| Feature value types | Real |
+| Number of classes | Total number of samples | Number of samples per class | Number of features | Feature value types |
+| --- | --- | --- | --- | --- |
+| 2 | 4,597 | 1,812 (1), 2,785 (0) | 57 | Real |
 
 This database contains information about 4597 email messages. Most of the features indicate whether a particular word or character was frequently occurring in the email. Here are the definitions of the features:
 
@@ -81,13 +78,7 @@ This database contains information about 4597 email messages. Most of the featur
 - 6 continuous real attributes of type char\_freq\_"CHAR" = percentage of characters in the e-mail that match "CHAR".
 - 1 continuous real attribute of type Capital\_run\_length\_average = average length of uninterrupted sequences of capital letters.
 - 1 continuous integer attribute of type Capital\_run\_length\_longest = length of longest uninterrupted sequence of capital letters.
-- 1 continuous integer attribute of type Capital\_run\_length\_total = total number of capital letters in the e-mail[CITATION Spambase \l 1033].
-
-Therefore, the dataset would be as described in Figure 1 (next page).
-
-![](RackMultipart20201225-4-rr0cgk_html_8278e26e86fc75c0.png)
-
-_Figure 1: Spambase dataset_
+- 1 continuous integer attribute of type Capital\_run\_length\_total = total number of capital letters in the e-mail [1].
 
 
 ##### Banana Dataset
@@ -96,14 +87,12 @@ Table 2 demonstrates the outline of this dataset:
 
 _Table 2_
 
-| Number of classes | 2 |
-| --- | --- |
-| Total number of samples | 5,300 |
-| Number of samples per class | 2,376 (+1), 2,924 (-1) |
-| Number of features | 2 |
-| Feature value types | Real |
+| Number of classes | Total number of samples | Number of samples per class | Number of features | Feature value types |
+| --- | --- | --- | --- | --- |
+| 2 | 5,300 | 2,376 (+1), 2,924 (-1) | 2 | Real |
 
-This is an artificial data set where instances belong to several clusters with a banana shape. There are two attributes At1 and At2 corresponding to the x and y axis, respectively. The class label (-1 and 1) represents one of the two banana shapes in the dataset[CITATION Banana \l 1033].
+
+This is an artificial data set where instances belong to several clusters with a banana shape. There are two attributes At1 and At2 corresponding to the x and y axis, respectively. The class label (-1 and 1) represents one of the two banana shapes in the dataset [2].
 
 
 ##### Wine Dataset
@@ -112,18 +101,13 @@ Table 3 demonstrates the outline of this dataset:
 
 _Table 3_
 
-| Number of classes | 3 |
-| --- | --- |
-| Total number of samples | 178 |
-| Number of samples per class | 59 (1), 71 (2), 48 (3) |
-| Number of features | 13 |
-| Feature value types | Real |
 
-This dataset contains the results of a chemical analysis of wines grown in the same region in Italy but derived from three different cultivars. The analysis determined the quantities of 13 constituents found in each of the three types of wines[CITATION Win \l 1033]. Figure 2 describes the dataset in detail.
+| Number of classes | Total number of samples | Number of samples per class | Number of features | Feature value types |
+| --- | --- | --- | --- | --- |
+| 3 | 178 | 59 (1), 71 (2), 48 (3) | 13 | Real |
 
-![](RackMultipart20201225-4-rr0cgk_html_5463e07f771a2fbf.jpg)
 
-_Figure 2: Wine Dataset_
+This dataset contains the results of a chemical analysis of wines grown in the same region in Italy but derived from three different cultivars. The analysis determined the quantities of 13 constituents found in each of the three types of wines [3].
 
 
 ##### Ionosphere Data set
@@ -132,16 +116,14 @@ Table 4 demonstrates the outline of this dataset:
 
 _Table 4_
 
-| Number of classes | 2 |
-| --- | --- |
-| Total number of samples | 351 |
-| Number of samples per class | 126 (b), 225 (g) |
-| Number of features | 34 |
-| Feature value types | Integer, Real |
+| Number of classes | Total number of samples | Number of samples per class | Number of features | Feature value types |
+| --- | --- | --- | --- | --- |
+| 2 | 351 | 126 (b), 225 (g) | 34 | Integer, Real |
+
 
 This radar data was collected by a system in Goose Bay, Labrador. This system consists of a phased array of 16 high-frequency antennas with a total transmitted power on the order of 6.4 kilowatts. The targets were free electrons in the ionosphere. "Good" radar returns are those showing evidence of some type of structure in the ionosphere. "Bad" returns are those that do not; their signals pass through the ionosphere.
 
-Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were 17 pulse numbers for the Goose Bay system. Instances in this database are described by 2 attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal.[CITATION Ionosphere \l 1033]
+Received signals were processed using an autocorrelation function whose arguments are the time of a pulse and the pulse number. There were 17 pulse numbers for the Goose Bay system. Instances in this database are described by 2 attributes per pulse number, corresponding to the complex values returned by the function resulting from the complex electromagnetic signal [4].
 
 
 ##### Iris Dataset
@@ -150,14 +132,12 @@ Table 5 demonstrates the outline of this dataset:
 
 _Table 5_
 
-| Number of classes | 3 |
-| --- | --- |
-| Total number of samples | 150 |
-| Number of samples per class | 50 (setosa), 50 (versicolor), 50 (virginica) |
-| Number of features | 4 |
-| Feature value types | Real |
+| Number of classes | Total number of samples | Number of samples per class | Number of features | Feature value types |
+| --- | --- | --- | --- | --- |
+| 3 | 150 | 50 (setosa), 50 (versicolor), 50 (virginica) | 4 | Real |
 
-This dataset contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other. The predicted value is the class of iris plant[CITATION Iris \l 1033].
+
+This dataset contains 3 classes of 50 instances each, where each class refers to a type of iris plant. One class is linearly separable from the other 2; the latter are NOT linearly separable from each other. The predicted value is the class of iris plant [5].
 
 
 #### Preprocessing
@@ -182,9 +162,9 @@ Genetic Algorithms (GAs) are a subclass of Evolutionary Algorithms where (a) the
 
 In a GA, a population of candidate solutions (i.e. individuals, creatures, or phenotypes) to an optimization problem is evolved toward better solutions. Each candidate solution has a set of properties (its chromosomes or genotype) which can be mutated and altered.
 
-The algorithm usually starts with a randomly generated population, and in each iteration, the fitness of every individual in the population is evaluated. The fitness is usually the value of the objective function in the optimization problem being solved. The more fit individuals are more probable to be selected from the current population. After each individual is modified (through genetic operators), the new generation of candidate solutions is then used in the next iteration of the algorithm. The algorithm terminates when either a maximum number of generations has been produced, or a satisfactory fitness level has been reached for the population[CITATION Whi94 \l 1033].
+The algorithm usually starts with a randomly generated population, and in each iteration, the fitness of every individual in the population is evaluated. The fitness is usually the value of the objective function in the optimization problem being solved. The more fit individuals are more probable to be selected from the current population. After each individual is modified (through genetic operators), the new generation of candidate solutions is then used in the next iteration of the algorithm. The algorithm terminates when either a maximum number of generations has been produced, or a satisfactory fitness level has been reached for the population [6].
 
-There are two types of genetic operators: mutation and cross over. Usually with a combination of both, a Genetic Algorithm will generate the new population in each iteration. Mutation is an important method for preserving the diversity of the candidate solutions by introducing small, random changes into them. This can be achieved by randomly modifying the value of a gene, as illustrated in figure 3[CITATION WEI11 \l 1033].
+There are two types of genetic operators: mutation and cross over. Usually with a combination of both, a Genetic Algorithm will generate the new population in each iteration. Mutation is an important method for preserving the diversity of the candidate solutions by introducing small, random changes into them. This can be achieved by randomly modifying the value of a gene, as illustrated in figure 3 [7].
 
 ![](RackMultipart20201225-4-rr0cgk_html_fa6237214541b198.jpg)
 
