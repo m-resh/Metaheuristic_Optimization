@@ -174,29 +174,29 @@ The proposed algorithm is a modified version of the Genetic Algorithm. One of th
 
 The first two datasets were used for tuning this section, which is how to choose those promising start points. To conclude, a particular probability distribution with specific parameters is used for each hyperparameter's initialization. The results for each hyper parameter are as follows:
 
-_ **SVM** _:
+**SVM**:
 
-- _ **Kernel** _: We only have 4 options here: rbf, sigmoid, linear, and polynomial, but instead of a complete random initialization, we can assign a probability to each choice. Since rbf was mostly the best kernel, the highest probability was assigned to it. The final probabilities assigned to the 4 kernels are 0.6, 0.3, 0.07, and 0.03, respectively.
+- **Kernel**: We only have 4 options here: rbf, sigmoid, linear, and polynomial, but instead of a complete random initialization, we can assign a probability to each choice. Since rbf was mostly the best kernel, the highest probability was assigned to it. The final probabilities assigned to the 4 kernels are 0.6, 0.3, 0.07, and 0.03, respectively.
 
-- _ **Gamma** _: Since the best values for gamma seemed to be inversely proportion to the number of features and the variance of the inputs, a gamma distribution with and was chosen here.
+- **Gamma**: Since the best values for gamma seemed to be inversely proportion to the number of features and the variance of the inputs, a gamma distribution with and was chosen here.
 
-_ **Random Forest** _:
+**Random Forest**:
 
-- _ **Number of Estimators** _: for this parameter we are simply using a uniform distribution.
-- _ **Max Depth** _: This must be an integer, so, a poisson distribution with was the final choice. 'a' and 'b' are tuned using the first 2 datasets.
-- _ **Max Features:** _ Here, as well, a poisson distribution with was used.
+- **Number of Estimators**: for this parameter we are simply using a uniform distribution.
+- **Max Depth**: This must be an integer, so, a poisson distribution with was the final choice. 'a' and 'b' are tuned using the first 2 datasets.
+- **Max Features**: Here, as well, a poisson distribution with was used.
 
 Next, we will go over how the Genetic Algorithm is applied. In each iteration, GA is comprised of the following sections:
 
-- _ **Fitness** _: The objective function here is the classifier's accuracy, specifically, on the test dataset. To compute fitness, we have to train a classifier using the parameters of interest and calculate its accuracy on the test set.
+- **Fitness**: The objective function here is the classifier's accuracy, specifically, on the test dataset. To compute fitness, we have to train a classifier using the parameters of interest and calculate its accuracy on the test set.
 
-- _ **Selection** _: In order to use the fitness values as probabilities for selection, they are scaled to have values between 0 and 1. According to those probabilities, we will choose a population with the pre-defined size. Needless to say, a high accuracy will have a greater probability of being chosen.
+- **Selection**: In order to use the fitness values as probabilities for selection, they are scaled to have values between 0 and 1. According to those probabilities, we will choose a population with the pre-defined size. Needless to say, a high accuracy will have a greater probability of being chosen.
 
-- _ **Mutation** _: Next, we will perform a multi-point mutation (uniform method) on the selected cases. new random values are assigned to some of the elements, according to pre-defined probability Pr. New values are drawn from the same distributions as the initial population, as explained above.
+- **Mutation**: Next, we will perform a multi-point mutation (uniform method) on the selected cases. new random values are assigned to some of the elements, according to pre-defined probability Pr. New values are drawn from the same distributions as the initial population, as explained above.
 
-- _ **Cross over** _: for SVM classifiers, since we only have 2 elements, single-point cross over is performed. For Random Forests, however, two-point cross over is chosen.
+- **Cross over**: for SVM classifiers, since we only have 2 elements, single-point cross over is performed. For Random Forests, however, two-point cross over is chosen.
 
-- _ **Stopping Criteria** _: After performing the above computations for one iteration, the algorithm sorts the new population and looks for the new best case. If the performance was not increased after a certain number of iterations, it will stop and print the current best result. In order to prevent long runs, we set a limit for the maximum number of iterations, as well.
+- **Stopping Criteria**: After performing the above computations for one iteration, the algorithm sorts the new population and looks for the new best case. If the performance was not increased after a certain number of iterations, it will stop and print the current best result. In order to prevent long runs, we set a limit for the maximum number of iterations, as well.
 
 
 ### 4. Results
