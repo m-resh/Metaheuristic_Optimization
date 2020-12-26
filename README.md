@@ -13,9 +13,9 @@ _Figure 3: Problem 2_ | _Figure 4: Problem 3_
 
 In the next part, Genetic Algorithm, Differential Evolution, Brute-force, and random search are implemented and compared on the traveling salesmen problem, as an example of NP-hard problems. In this problem, we are looking for a tour through 6 cities with the least cost (i.e. least total distance travelled). Figure 5 is a visualizations of this problem which shows the optimal tour for the chosen random seed.
 
-![](figures/2/optimal.png)
-
-*_Figure 5: The traveling salesman problem_*
+| ![](figures/2/optimal.png) |
+|:--:|
+| _Figure 5: The traveling salesman problem_ |
 
 In part 3, our optimization problems are blackbox problems! With no knowledge of how these functions work, Particle Swarm Optimization is implemented and compared alongside genetic algorithm, grid search, and random search. Lastly, a real-world application of metaheuristic optimization is presented as the final project: **Hyperparameter Optimization for classifiers using Genetic Algorithm**
 
@@ -60,7 +60,7 @@ Table 1 demonstrates the outline of this dataset:
 _Table 1_
 
 | Number of classes | Total number of samples | Number of samples per class | Number of features | Feature value types |
-| --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: |
 | 2 | 4,597 | 1,812 (1), 2,785 (0) | 57 | Real |
 
 This database contains information about 4597 email messages. Most of the features indicate whether a particular word or character was frequently occurring in the email. Here are the definitions of the features:
@@ -79,7 +79,7 @@ Table 2 demonstrates the outline of this dataset:
 _Table 2_
 
 | Number of classes | Total number of samples | Number of samples per class | Number of features | Feature value types |
-| --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: |
 | 2 | 5,300 | 2,376 (+1), 2,924 (-1) | 2 | Real |
 
 
@@ -94,7 +94,7 @@ _Table 3_
 
 
 | Number of classes | Total number of samples | Number of samples per class | Number of features | Feature value types |
-| --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: |
 | 3 | 178 | 59 (1), 71 (2), 48 (3) | 13 | Real |
 
 
@@ -108,7 +108,7 @@ Table 4 demonstrates the outline of this dataset:
 _Table 4_
 
 | Number of classes | Total number of samples | Number of samples per class | Number of features | Feature value types |
-| --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: |
 | 2 | 351 | 126 (b), 225 (g) | 34 | Integer, Real |
 
 
@@ -124,7 +124,7 @@ Table 5 demonstrates the outline of this dataset:
 _Table 5_
 
 | Number of classes | Total number of samples | Number of samples per class | Number of features | Feature value types |
-| --- | --- | --- | --- | --- |
+| :---: | :---: | :---: | :---: | :---: |
 | 3 | 150 | 50 (setosa), 50 (versicolor), 50 (virginica) | 4 | Real |
 
 
@@ -157,9 +157,9 @@ The algorithm usually starts with a randomly generated population, and in each i
 
 There are two types of genetic operators: mutation and cross over. Usually with a combination of both, a Genetic Algorithm will generate the new population in each iteration. Mutation is an important method for preserving the diversity of the candidate solutions by introducing small, random changes into them. This can be achieved by randomly modifying the value of a gene, as illustrated in figure 6 [7].
 
-![](figures/4/mutation.png)
-
-_Figure 6: multi-gene mutation_
+| ![](figures/4/mutation.png) |
+|:--:|
+| _Figure 6: multi-gene mutation_ |
 
 crossover is performed by swapping parts of two genotypes. When performing single-point crossover (SPX, 1-PX), both parental chromosomes are split at a randomly determined crossover point. Subsequently, a new child genotype is created by appending the second part of the second parent to the first part of the first parent as illustrated in Figure 7. With crossover, it is possible that two offspring are created at once from the two parents. The second offspring is shown in the long parentheses. In two-point crossover (TPX, 2-PX), both parental genotypes are split at two points and a new offspring is created by using parts number one and three from the first, and the middle part from the second parent chromosome. The second possible offspring of this operation is again displayed in parentheses [7].
 
