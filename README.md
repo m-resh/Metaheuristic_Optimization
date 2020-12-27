@@ -15,6 +15,6 @@ In the next part, Genetic Algorithm, Differential Evolution, Brute-force, and ra
 
 | ![](figures/2/random_tour.png) | ![](figures/2/optimal.png) |
 |:--:|:--:|
-| _Figure 5: The traveling salesman problem - a random tour_ | _The optimal tour_ |
+| _Figure 5: The traveling salesman problem, a random tour_ | _The optimal tour_ |
 
 Finally, in part 3, our optimization objectives are blackbox problems! With no knowledge of how these functions work, Particle Swarm Optimization is implemented and compared alongside genetic algorithm, grid search, and random search.
